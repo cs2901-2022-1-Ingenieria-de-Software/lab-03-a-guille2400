@@ -6,15 +6,17 @@ import lab.demand.Order;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+
 
 public class Main {
 
     public static void main (String [ ] args) {
+        //static final Logger logger = Logger.getLogger(Main.class.getName());
+
         System.out.println("===INICIO====");
         Tax tax = new Tax();
-        
         ManageDemand mg = new ManageDemand(tax);
-
         List<Order> testOrders = buildSampleOrders();
         
         double resultFirst = mg.calculateTotal(testOrders);
